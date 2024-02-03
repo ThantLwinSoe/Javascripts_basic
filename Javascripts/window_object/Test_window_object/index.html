@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Person Data</title>
+  <style>
+    /* Optional: Add some basic styling for better presentation */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      border: 1px solid #ccc;
+      margin-bottom: 5px;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Specify an ID for the element where the list will be displayed -->
+<div id="personList"></div>
+
+<script>
+  // Array of persons data
+  const persons = [
+    { name: 'John Doe', age: 25, city: 'New York' },
+    { name: 'Jane Smith', age: 30, city: 'Los Angeles' },
+    { name: 'Bob Johnson', age: 22, city: 'Chicago' }
+  ];
+
+  // Display the data on the HTML page
+  const dataList = document.createElement('ul');
+
+  // Loop through each person and create a list item
+  persons.forEach(person => {
+    const listItem = document.createElement('li');
+    listItem.textContent = `Name: ${person.name}, Age: ${person.age}, City: ${person.city}`;
+    dataList.appendChild(listItem);
+  });
+
+  // Append the list to the element with the ID "personList"
+  document.getElementById('personList').appendChild(dataList);
+</script>
+
+</body>
+</html>

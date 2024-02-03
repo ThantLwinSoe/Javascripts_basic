@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Li | သန့်လွင်စိုး</title>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+</head>
+<body>
+    <header class="header">
+        <h2 >IT Department person</h2>
+    </header>
+
+    <main class="m-20">
+        <div class="container " id="container">
+        </div>
+    </main>
+
+    <script>
+        const persons = [
+            {name : 'Thant' , skill : ['java','linux','javascripts']},
+            {name : 'Hmue' , skill : ['PHP', 'linux','javascripts']},
+            {name : 'Thet', skill : ['A+', 'Linux', 'System Adminstration']},
+            {name : 'Kabaw', skill : ['C', 'Linux', 'Embedded System' ]},
+            {name : 'Hsu Naing', skill : ['Python', 'Linux', 'AI' ]}
+        ]
+
+        const container = document.getElementById('container');       
+
+        persons.forEach( (person) => {
+
+        const card = document.createElement('div');
+        card.className = 'card bg-blue p-20';
+
+        const card_title = document.createElement('div');
+        card_title.className = 'card-title text-white ';
+
+        const card_body = document.createElement('div');
+        card_body.className = 'card-body text-white';
+
+        const data_item = document.createElement('ul');
+        data_item.className = 'list-gp';
+
+        let name = document.createTextNode(person.name);
+
+        card_title.appendChild(name);
+
+            person.skill.forEach( (skill) => {
+
+                let list_item = document.createElement('li');
+
+                list_item.textContent = skill;
+
+                data_item.appendChild(list_item);
+            })
+
+            card_body.appendChild(data_item);
+            card.appendChild(card_title);
+            card.appendChild(card_body);        
+            container.appendChild(card);
+
+        })
+
+
+    </script>
+
+</body>
+</html>

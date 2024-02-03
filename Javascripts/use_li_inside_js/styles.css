@@ -1,0 +1,29 @@
+body,h2{
+    margin: 0;
+}
+.header{
+    padding: 20px;
+}
+.m-20{
+    margin: 20px;
+}
+.p-20{
+    padding: 20px;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 20px;
+}
+.card{
+    grid-column: auto / span 3;
+}
+.bg-blue{
+    background-color: rgb(56, 123, 239);
+}
+.text-white{
+    color: #fff;
+}
+.list-gp {
+    list-style: none;
+}
