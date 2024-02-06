@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customize Image | သန့်လွင်စိုး</title>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+</head>
+<body>
+    <div class="container">
+        <div class="btn-gp">
+            <a class="btn p-20" href="#" onclick="add_photo('./images/camara.avif')">Add Image</a>
+        </div>
+    </div>
+
+    <div id="hello"></div>
+    
+     <div class="container m-20" id="container">
+          <div class="card bg-light-blu text-white">
+           <img class="card-image" src="./images/people.avif" alt="photo">
+            <div class="card-title">Jhon Cena </div>
+            <div class="card-body">
+                
+                    <p>Java Developer</p>
+                    <p>Business Adminastrator</p>
+              
+            </div>
+        </div>
+
+        <div class="card bg-light-blu text-white">
+            <img class="card-image" src="./images/people.avif" alt="photo">
+             <div class="card-title">Jhon Cena </div>
+             <div class="card-body">
+                 
+                     <p>Java Developer</p>
+                     <p>Business Adminastrator</p>
+               
+             </div>
+         </div> 
+    </div> 
+    
+    <script>
+
+        let container = document.createElement('div');
+        let card = document.createElement('div');
+        let card_title = document.createElement('div');
+        let card_body = document.createElement('div');
+        let card_image = document.createElement('img');
+
+        container.className = 'container m-20';
+        card.className = 'card bg-light-blu text-white';
+        card_title.className = 'card-title';
+        card_body.className = 'card-body';
+        card_image.className = 'card-image';
+        
+        
+         
+
+        function add_photo(photos){
+            card_image.src = photos;
+         //   let container = document.getElementById('container');
+            let p_first = document.createElement('p');
+            let p_second = document.createElement('p');
+
+            card_title.innerHTML = 'Thant Lwin Soe';
+            p_first.innerHTML = 'Full Stack Developer';
+            p_second.innerHTML = 'Datedate Kyel co.,ltd'
+
+            card_body.appendChild(p_first);
+            card_body.appendChild(p_second);
+            card.appendChild(card_image);
+            card.appendChild(card_title);
+            card.appendChild(card_body);
+            container.appendChild(card);
+            document.getElementById('hello').appendChild(container);
+           
+        }
+
+        function add_skill(skill){
+
+        }
+
+        function test_hello(saySomething) {
+            alert(saySomething);
+        }
+        
+    </script>
+</body>
+</html>
