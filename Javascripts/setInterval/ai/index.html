@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Move Card Example</title>
+<style>
+    /* Basic styling for demonstration */
+    #card {
+        position: relative;
+        width: 300px;
+        height: 200px;
+        background-color: #f0f0f0;
+        border-radius: 10px;
+        padding: 20px;
+        overflow: hidden;
+    }
+
+    #card img {
+        width: 150px;
+        height: 150px;
+        border-radius: 5px;
+    }
+
+    #card h2 {
+        margin-top: 10px;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+
+<div id="card">
+    <img src="../images/typing.avif" alt="Card Image">
+    <h2>Card Header Title</h2>
+</div>
+
+<script>
+    // JavaScript code to move the card
+    let card = document.getElementById('card');
+    let position = 0;
+    let direction = 1; // 1 for moving right, -1 for moving left
+
+    setInterval(function() {
+        // Change position of the card
+        position += 5 * direction; // Adjust the speed by changing the multiplier (5 in this case)
+        card.style.left = position + 'px';
+
+        // If the card reaches the right edge of the screen, change direction to move left
+        if (position >= window.innerWidth - card.offsetWidth) {
+            direction = -1;
+        }
+
+        // If the card reaches the left edge of the screen, change direction to move right
+        if (position <= 0) {
+            direction = 1;
+        }
+    }, 50); // Adjust the interval (milliseconds) for smoother or faster movement
+</script>
+
+</body>
+</html>

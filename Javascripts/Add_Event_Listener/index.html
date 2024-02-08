@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Event Listener | သန့်လွင်စိုး</title>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+</head>
+<body>
+    <div class="container">
+        <p id="text">Please click the button to change the text!!!</p>
+        
+            <button id="btn">Click Me!!!</button>
+        
+            <button id="btn-inc">Increase Size</button>
+            
+            <button id="btn-dec">Decrease Size</button>
+    </div>
+
+    <script>
+
+        const paragraph = document.getElementById('text');
+        const button = document.getElementById('btn');
+        const button_increase = document.getElementById('btn-inc');
+        const button_decrease = documnet.getElementById('btn-dec');
+
+        button.addEventListener('click', () => {
+            paragraph.textContent = 'Text Changed!!!'
+        });
+
+        button_increase.addEventListener('click', () => {
+            let font_size = parseFloat(window.getComputedStyle(paragraph).fontSize);
+            paragraph.style.fontSize = (font_size + 2) + 'px';
+        }); 
+
+        button_decrease.addEventListener('click', () => {
+            let tmp = window.getComputedStyle(paragraph).fontSize;
+            console.log(tmp);
+            let font_size = parseFloat(tmp);
+            paragraph.style.fontSize = (font_size - 2) + 'px';
+        });
+
+    </script>
+
+</body>
+</html>

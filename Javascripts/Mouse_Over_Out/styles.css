@@ -1,0 +1,23 @@
+.container{
+    margin: 10px auto;
+    width: 250px;
+    padding: 20px;
+    background-color: dodgerblue;
+    color: #fff;
+    height: 400px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0px 0px 4px 0x #666;
+}
+.container-over{
+    margin: 10px auto;
+    width: 250px;
+    padding: 20px;
+    background-color: rgb(30, 255, 64);
+    color: #fff;
+    height: 400px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0px 0px 4px 0x #666;
+
+}

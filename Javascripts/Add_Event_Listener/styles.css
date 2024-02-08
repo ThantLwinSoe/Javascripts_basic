@@ -1,0 +1,26 @@
+.container {
+
+    width: 500px;
+    height: auto;
+    margin: 0px auto;
+    background-color: aqua;
+    color: #fff;
+    font-weight: 900;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px 0px #666;
+}
+p{
+    margin: 10px;
+    padding: 20px;
+}
+button{
+    margin: 10px 20px;
+    padding: 5px;
+    background-color: chocolate;
+    box-shadow: 0px 0px 4px 0px #666;
+    border: none;
+    border-radius: 5px;
+    color: rgb(246, 246, 250);
+    font-family: 'Courier New', Courier, monospace;
+}

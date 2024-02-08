@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DOM Example</title>
+<style>
+    /* Some basic styling for demonstration purposes */
+    .container {
+        text-align: center;
+        margin-top: 50px;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <p id="myParagraph">Click the buttons to change this text.</p>
+    <button id="increaseSize">Increase Font Size</button>
+    <button id="decreaseSize">Decrease Font Size</button>
+    <button id="changeText">Change Text</button>
+</div>
+
+<script>
+    // JavaScript code to interact with the DOM
+
+    // Get a reference to the paragraph and the buttons
+    const paragraph = document.getElementById('myParagraph');
+    const increaseButton = document.getElementById('increaseSize');
+    const decreaseButton = document.getElementById('decreaseSize');
+    const changeButton = document.getElementById('changeText');
+
+    // Add event listeners to the buttons
+    increaseButton.addEventListener('click', function() {
+        // Increase font size by 2 pixels
+        let currentSize = parseFloat(window.getComputedStyle(paragraph).fontSize);
+        paragraph.style.fontSize = (currentSize + 2) + 'px';
+    });
+
+    decreaseButton.addEventListener('click', function() {
+        // Decrease font size by 2 pixels
+        let currentSize = parseFloat(window.getComputedStyle(paragraph).fontSize);
+        paragraph.style.fontSize = (currentSize - 2) + 'px';
+    });
+
+    changeButton.addEventListener('click', function() {
+        // Change the text of the paragraph
+        paragraph.textContent = 'Text changed!';
+    });
+</script>
+
+</body>
+</html>

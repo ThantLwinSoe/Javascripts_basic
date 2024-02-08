@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setInterval | သန့်လွင်စိုး</title>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="ok">
+            <img src="../images/guitar.avif" alt="guitar">
+            <div>The Running Guitar</div>
+        </div>     
+        <div class="box" id="ok">
+            <img src="../images/guitar.avif" alt="guitar">
+            <div>The Running Guitar</div>
+        </div>  
+    </div>
+
+    <script>
+
+        let box = document.querySelector('.box');
+
+        let position = 0;
+        let direction = 1;
+
+        
+
+        setInterval( () => {
+            position += 5 * direction;
+            box.style.left = position + 'px';
+
+            if(position >= window.innerWidth - box.offsetWidth){
+                direction = -1;
+            }
+
+            if(position <= 0) {
+                direction = 1;
+            }
+        }, 30); 
+
+
+    </script>
+
+</body>
+</html>

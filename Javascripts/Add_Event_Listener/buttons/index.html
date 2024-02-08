@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add event listener | သန့်လွင်စိုး</title>
+</head>
+<link rel="stylesheet" href="styles.css" type="text/css">
+<body>
+    <div class="container">
+        <p id="paragraph">This Paragraph Text</p>
+        <button id="text_btn">Change Text</button>
+        <button id="increase_btn">Increase Text</button>
+        <button id="decrease_btn">Decrease Text</button>
+    </div>
+
+    <script>
+        
+        paragraph = document.getElementById('paragraph');
+        changeText = document.getElementById('text_btn');
+        increaseButton = document.getElementById('increase_btn');
+        decreaseButton = document.getElementById('decrease_btn');
+
+        changeText.addEventListener('click', () => {
+            paragraph.textContent = 'Hello Text Change';
+        });
+
+        increaseButton.addEventListener('click', () => {
+            let font = (window.getComputedStyle(paragraph).fontSize);
+            console.log(font); // 16px
+            console.log(parseFloat(font)); // 16
+            paragraph.style.fontSize = (parseFloat(font) + 2) + 'px';
+
+        // let currentSize = parseFloat(window.getComputedStyle(paragraph).fontSize);
+        // paragraph.style.fontSize = (currentSize + 2) + 'px';
+
+        });
+
+
+        decreaseButton.addEventListener('click', () => {
+           let font =  window.getComputedStyle(paragraph).fontSize;
+           console.log(font);
+           console.log(parseFloat(font));
+           paragraph.style.fontSize = (parseFloat(font) - 2) + 'px';
+        });
+
+        
+    </script>
+</body>
+</html>

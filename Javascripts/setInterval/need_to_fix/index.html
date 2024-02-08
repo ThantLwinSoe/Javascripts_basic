@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetInterval | သန့်လွင်စိုး</title>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+</head>
+<body>
+    <div class="box">
+        <div class="container" id="container ">
+            <img id="img" class="image" src="./images/typing.avif" alt="profile_photos">
+            <div id="cardTitle" class="card-title">Old Keyboard</div>
+            <div id="cardBody" class="card-body">The Beautiful Letter</div>
+        </div>
+    </div>
+
+    <script>
+        
+        let con = document.getElementById('container');
+
+        let position = 0;
+        let direction = 1; 
+
+        setInterval( () => {
+            position += 5 * direction;
+            con.style.left = position + 'px';
+
+            if(position >= 1500) {
+                direction = -1;
+            }
+
+            if(position <= 0) {
+                direction = 1;
+            }
+
+        }, 50);
+
+    </script>
+</body>
+</html>
