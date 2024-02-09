@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element By Tags | သန့်လွင်စိုး</title>
+</head>
+<body>
+    <div id="demo">
+        <p >Hello My name is Thant Lwin Soe.</p>
+        <p>I am IT Engineer.</p>
+        <p>I have strong knowledge.</p>
+        <button id="btn">Change Text</button>
+    </div>
+
+    <script>
+        let data = document.getElementsByTagName('p');
+        let btn = document.getElementById('btn');
+
+        btn.addEventListener('click', () => {
+            data[2].innerHTML = 'Saya';
+        });
+
+        
+    </script>
+</body>
+</html>

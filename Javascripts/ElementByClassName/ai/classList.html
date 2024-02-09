@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Change Style on Hover</title>
+<style>
+  /* Initial style of the div */
+  .highlight {
+    background-color: lightgreen;
+  }
+</style>
+</head>
+<body>
+
+<!-- The div element -->
+<div id="myDiv" class="original" onmouseover="highlightElement(this)" onmouseout="restoreElement(this)">
+  Hover over me
+</div>
+
+<script>
+function highlightElement(element) {
+  // Add the 'highlight' class to the element
+  element.classList.add('highlight');
+}
+
+function restoreElement(element) {
+  // Remove the 'highlight' class from the element
+  element.classList.remove('highlight');
+}
+</script>
+
+</body>
+</html>

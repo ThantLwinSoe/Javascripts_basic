@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Element By Class Name | သန့်လွင်စိုး</title>
+    <style>
+        .box-one{
+            margin: 20px;
+            width: 150px;
+            height: 150px;
+            background-color: rgb(6, 60, 60);
+            color: #32c074;
+        }
+        .box-two{
+            margin: 20px;
+            width: 150px;
+            height: 150px;
+            background-color: dimgray;
+            color: rgb(196, 208, 249);
+        }
+        .box-modify-one{
+            margin: 40px;
+            width: 50px;
+            height: 50px;
+            border-radius: 30px;
+            background-color: rgb(222, 170, 37);
+            color: #222;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div class="box-one" onmouseover="changeBackGroundColor(this)" onmouseout="changeBackGroundColorOut(this)">Box One</div>
+        <div class="box-two" >Box Two</div>
+    </div>
+
+    <script>
+        // let box_one = document.getElementById('box').getElementsByClassName('box-one')[0];
+        // let box_two = document.getElementById('box').getElementsByClassName('box-two')[0];
+
+        function changeBackGroundColor(element) {
+            // we can use classList
+            // element.classList.add('box-modify-one');
+            element.className = 'box-modify-one';
+        }
+
+        function changeBackGroundColorOut(element) {
+            // use classList
+        //    element.classList.remove('box-modify-one');
+            element.className = element.className.replace('box-modify-one', 'box-one');
+        }
+
+    </script>
+</body>
+</html>

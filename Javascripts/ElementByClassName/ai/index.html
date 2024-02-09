@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Change Style on Hover</title>
+<style>
+  /* Initial style of the div */
+  #myDiv {
+    width: 200px;
+    height: 200px;
+    background-color: lightblue;
+    border: 1px solid black;
+    transition: background-color 0.3s ease;
+  }
+</style>
+</head>
+<body>
+
+<!-- The div element -->
+<div id="myDiv" onmouseover="changeStyle(this)" onmouseout="restoreStyle(this)">
+  Hover over me
+</div>
+
+<script>
+function changeStyle(element) {
+  // Store the original style
+  element.dataset.ok = element.getAttribute('style');
+  
+  // Change the style
+  element.style.backgroundColor = 'lightgreen';
+}
+
+function restoreStyle(element) {
+  // Restore the original style
+  if (element.dataset.ok) {
+    element.setAttribute('style', element.dataset.ok);
+  } else {
+    // If originalStyle is not set, remove any inline styles
+    element.removeAttribute('style');
+  }
+}
+</script>
+
+</body>
+</html>
