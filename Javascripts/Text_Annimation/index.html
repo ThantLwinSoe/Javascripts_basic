@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Annimation | သန့်လွင်စိုး</title>
+</head>
+<body>
+    <div>
+        <div>Thant <span id="anni"></span> Soe</div>
+        <button onclick="callAnni()">Click me</button>
+    </div>
+
+    <script>
+
+        let text = document.getElementById('anni');
+        
+
+        function makeAnni() {
+            return 'Lwin'.split();
+        }
+
+        async function anni() {
+           let result = await makeAnni();
+            return result;
+        }
+
+        function callAnni() {
+            return setInterval( () => {
+
+                anni().then((result) => text.innerHTML = result)
+                
+            },500);
+        }
+        
+    </script>
+</body>
+</html>

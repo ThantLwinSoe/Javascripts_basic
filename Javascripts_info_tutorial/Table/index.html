@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table DOM Object | သန့်လွင်စိုး</title>
+</head>
+<body>
+    <table id="og">
+        <tr>
+            <td>one</td>
+            <td>two</td>
+        </tr>
+    </table>
+
+    <script>
+        let td = og.rows[0].cells[1];
+        td.style.backgroundColor = 'red';
+    </script>
+
+    <!-- <table id="table">
+        <tr>
+          <td>one</td><td>two</td>
+        </tr>
+        <tr>
+          <td>three</td><td>four</td>
+        </tr>
+      </table>
+      
+      <script>
+        // get td with "two" (first row, second column)
+        let td = table.rows[0].cells[1];
+        td.style.backgroundColor = "red"; // highlight it
+      </script> -->
+</body>
+</html>

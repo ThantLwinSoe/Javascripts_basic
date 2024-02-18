@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prompt | သန့်လွင်စိုး</title>
+</head>
+<body>
+    <div id="text"></div>
+    <div id="engineer"></div>
+
+    <script>
+    alert('Hello World!!!');
+       let str = prompt("Test",'this is prompt testing');
+       document.getElementById('text').innerHTML = str;
+
+       let bol = confirm("Are you an Engineer!!!");
+       const con = document.getElementById('engineer');
+
+       if(bol) {
+        con.innerHTML = "IT Engineer";
+       }else{
+        con.innerHTML = "He is a super hero!!!"
+       }
+    </script>
+</body>
+</html>

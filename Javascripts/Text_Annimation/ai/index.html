@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Text Animation</title>
+</head>
+<body>
+
+<!-- Container element for displaying the animated text -->
+<div id="textContainer"></div>
+
+<script>
+// Get the container element
+const textContainer = document.getElementById('textContainer');
+
+// The text to animate
+const textToAnimate = "Hello, world!";
+
+// Split the text into an array of characters
+const characters = textToAnimate.split('');
+
+// Initialize index to track the current character
+let currentIndex = 0;
+
+// Function to animate text
+function animateText() {
+    // Clear previous content of the container
+    textContainer.textContent = '';
+
+    // Add the current character to the container
+    textContainer.textContent += characters[currentIndex];
+
+    // Increment index for the next character
+    currentIndex++;
+
+    // Check if all characters have been animated
+    if (currentIndex === characters.length) {
+        // Reset index to animate the text again
+        currentIndex = 0;
+    }
+}
+
+// Call the animateText function every 200 milliseconds (adjust as needed)
+setInterval(animateText, 200);
+</script>
+
+</body>
+</html>
